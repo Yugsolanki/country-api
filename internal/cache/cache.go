@@ -32,6 +32,7 @@ func NewInMemoryCache(ttl time.Duration) *InMemoryCache {
 		stopChan: make(chan struct{}),
 	}
 
+	// this will trigger cleanup every ttl/2 seconds
 	go cache.cleanup()
 
 	return cache
