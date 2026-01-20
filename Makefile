@@ -1,3 +1,5 @@
+.PHONY: build run test test-race test-coverage clean lint fmt deps
+
 build:
 	go build -o bin/server cmd/server/main.go
 
